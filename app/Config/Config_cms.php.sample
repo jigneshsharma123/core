@@ -1,0 +1,100 @@
+<?php
+
+namespace Config;
+
+use CodeIgniter\Config\BaseConfig;
+
+class Config_cms extends BaseConfig
+{
+    public $page_title  = 'CMS'; 
+
+    public  $cms = array(
+        // Site name
+        'site_name' => 'Admin Panel',
+
+        // Default page title prefix
+        'page_title_prefix' => 'Admin Panel - ',
+
+        // Default page title
+        'page_title' => '',
+
+        // Default meta data
+        'meta_data'    => array(
+            'author'        => '',
+            'description'    => '',
+            'keywords'        => ''
+        ),
+        
+        // Default scripts to embed at page head or end
+        'scripts' => array(
+            'head'    => array(
+                'assets/admin/js/jquery.min.js',
+                'assets/admin/js/jquery-ui.js'
+            ),
+            'foot'    => array(
+                
+            ),
+        ),
+
+        // Default stylesheets to embed at page head
+        'stylesheets' => array(
+            'screen' => array(
+                'assets/admin/css/bootstrap.min.css',
+                'assets/admin/css/font-awesome.min.css',
+                'assets/admin/css/nprogress.css',
+                'assets/admin/css/animate.min.css',
+                'assets/admin/css/select2.min.css',
+                'assets/admin/css/custom.min.css',
+                'assets/admin/css/jquery-ui.css',
+                'assets/admin/css/datepicker/daterangepicker.css',
+                'assets/admin/css/bootstrap-colorpicker.min.css'
+            )
+        ),
+
+        // Default CSS class for <body> tag   login
+        'body_class' => 'nav-md',
+        
+        // Multilingual settings
+        'languages' => array(
+        ),
+      
+        'settings' => array('general_settings'=>array('theme'),'mail_settings'=>array('protocol','smtp_host', 'smtp_user', 'smtp_pass', 'smtp_port',  'email_from', 'signature'),'google_analytics'=>array('tracking_code', 'tag_manager_code')),
+      
+        'theme_menus' => array('top'=>"Top"),
+      
+        'theme_templates' => array('multi_section'=>array("name"=>"Default","file"=>"multi_section.php","is_sectional"=>"yes"),
+                                         'home'=>array("name"=>"Home","file"=>"homepage.php","is_sectional"=>"yes"),
+                                         'content'=>array("name"=>"Content","file"=>"content.php","is_sectional"=>"no")),
+
+        'theme_common_sections' => array('footer_bottom'=>array("name"=>"Footer Bottom","file"=>"footer_bottom.php"),
+                                       'footer_left'=>array("name"=>"Footer Top Left","file"=>"footer_left.php"),
+                                       'footer_center'=>array("name"=>"Footer Top Center 1","file"=>"footer_center.php"),
+                                       'footer_right'=>array("name"=>"Footer Top Center 2","file"=>"footer_right.php"),
+                                       //'footer_right2'=>array("name"=>"Footer Top Right","file"=>"footer_right2.php"),
+                                       'sidebar'=>array("name"=>"Sidebar","file"=>"sidebar.php")),
+      
+        'theme_multi_sections' => array(
+                                         'with_button'=>array("name"=>"Info With Button","file"=>"with_button.php"),
+                                         'without_title'=>array("name"=>"Section Without Title","file"=>"without_title.php"),
+                                         'with_title'=>array("name"=>"Section With Title","file"=>"with_title.php"),
+                                         'icons'=>array("name"=>"Icons","file"=>"icons.php"),
+                                         'full_width'=>array("name"=>"Full Width","file"=>"full_width.php"),
+                                         'home_video'=>array("name"=>"Home Video","file"=>"home_video.php"),
+                                         'list_items'=>array("name"=>"List Items","file"=>"list_items.php"),
+                                         'left'=>array("name"=>"Featured Image In The Left Side Of The Content","file"=>"left.php"),
+                                         'right'=>array("name"=>"Featured Image In The Right Side Of The Content","file"=>"right.php"),'after'=>array("name"=>"Featured Image After The Content","file"=>"after.php"),
+                                         'before'=>array("name"=>"Featured Image Before The Content","file"=>"before.php"),
+                                         'left_half'=>array("name"=>"Left Side Section","file"=>"left_half.php"),
+                                         'right_half'=>array("name"=>"Right Side Section","file"=>"right_half.php"),
+                                         'service_advantage'=>array("name"=>"Service Advantage","file"=>"service_advantage.php"),
+                                         'service_left_half'=>array("name"=>"Services Left Side Section","file"=>"service_left_half.php"),
+                                         'service_right_half'=>array("name"=>"Services Right Side Section","file"=>"service_right_half.php")),
+
+        // Debug tools
+        'debug' => array(
+            'view_data'    => FALSE,
+            'profiler'    => FALSE
+        ),
+    );
+    public $sess_cookie_name = 'ci_session_admin';   
+}
